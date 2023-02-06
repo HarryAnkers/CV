@@ -1,0 +1,149 @@
+\documentclass[a4paper]{article}
+    \usepackage{fullpage}
+    \usepackage{amsmath}
+    \usepackage{amssymb}
+    \usepackage{tabularx}
+    \usepackage{textcomp}
+    \usepackage[utf8]{inputenc}
+    \usepackage[T1]{fontenc}
+    \textheight=10in
+    \pagestyle{empty}
+    \raggedright
+
+    %\renewcommand{\encodingdefault}{cg}
+%\renewcommand{\rmdefault}{lgrcmr}
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+
+% DEFINITIONS FOR RESUME %%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\area} [2] {
+    \vspace*{-9pt}
+    \begin{verse}
+        \textbf{#1}   #2
+    \end{verse}
+}
+
+\newcommand{\lineunder} {
+    \vspace*{-8pt} \\
+    \hspace*{-28pt} \hrulefill \\
+}
+
+\newcommand{\header} [1] {
+    {\hspace*{-28pt}\vspace*{6pt} \textsc{#1}}
+    \vspace*{-2pt} \lineunder
+}
+
+\newcommand{\employer} [3] {
+    { \textbf{#1} (#2)\\ \underline{\textbf{\emph{#3}}}\\  }
+}
+
+\newcommand{\contact} [3] {
+    \vspace*{-20pt}
+    \begin{center}
+        {\Huge \scshape {#1}}\\
+        #2 \\ #3
+    \end{center}
+    \vspace*{-8pt}
+}
+
+\newenvironment{achievements}{
+    \begin{list}
+        {$\bullet$}{\topsep 0pt \itemsep -2pt}}{\vspace*{4pt}
+    \end{list}
+}
+
+\newcommand{\schoolwithcourses} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+    \vspace*{5pt}
+}
+
+\newcommand{\school} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+}
+% END RESUME DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\vspace*{-20pt}
+
+
+
+%======== Profile ========%
+\vspace*{-20pt}
+\begin{center}
+    {\Huge \scshape {Harrison Ankers}}\\
+    h-ankers@outlook.com \textbf{$\cdot$} (0)7787 913880 \textbf{$\cdot$} UK Citizen USA residency
+\end{center}
+
+\normalsize
+%======== Education ========%
+\header{\textbf{Education}}
+\textbf{Imperial College London  }\hfill \textbf{London, UK} 2016 - 2020 \\
+\qquad \textbf{MEng \hfill  \textit{2:1}}  \\
+\qquad \textbf{Electronic and Information Engineering (Electrical Engineering + Computing)}  \\
+\quad Key modules: System Architecture, Software Engineering, Databases, AI, ML, Computation Finance \\
+\quad Key projects around C++, C, Python, SQL, ML, Bash, Signal Transforms, Financial Modelling
+\vspace{2mm}
+
+%======== Experience ========%
+\header{\textbf{Professional Experience}}
+\vspace{1mm}
+
+%== Tractable ==%
+\textbf{Tractable} - \textbf{L1 + L2 Full Stack Engineer} \hfill \textbf{London, UK}  2021 - Current \\
+\vspace{-2mm}
+\begin{itemize} \itemsep 0pt
+    \item Key role in the full development pipeline: feature scoping, prioritization, ticket grooming, estimating, implementation, test production, PR completion/review, deployment, feedback delivery, bug reporting, bug fixing
+    \item Currently working in core product team to deliver full-stack product features (Typescript, Python, React, GQL, SQL, Prisma, Cypress, Kafka) for AI Review auto (highest revenue product for automating the review of auto insurance claims)
+    \item Collaborated on the creation of Subro costs calculator (relationship improvement and workflow enhancement with largest clients) and rental day check (unlocks \$1.7m in 20-30\% more claims)
+    \item Independently delivered e2e 15+ full Kubernetes CI/CD harness pipelines, head of devops referred to them officially "the most advanced CI/CD pipelines we have at Tractable"
+    \item On-call for multiple codebases and have responded to client-impacting out-of-hours incidents, some of which were time-sensitive multi-million contract PoCs
+    \item Supporting engineer for the department in responding to bug reports and cross-team collaboration requests, resulting in 93\% more support tickets created and 130\% more completed than the average Tractable engineer
+    \item Initiated and led a ceremony to combat tech debt which resolved critical security issues, performed refactors, and recently achieved 14k in external API savings. Manager subsequently proposed adding major re-architecture projects, such as full QA automation and Iguana Inference graph migration, to the ceremony due to its success
+\end{itemize}
+\vspace{-1mm}
+
+%== Deutsche ==%
+\textbf{Deutsche Bank} - \textbf{Software Engineer} \hfill \textbf{London, UK}  2020 - 2021 \\
+\vspace{-2mm}
+\begin{itemize} \itemsep 0pt
+    \item Internship: Java/Angular QA dashboard to monitor and triage KYC product on demand
+    \item Worked on Java rules engine data pipeline migration project to congregate distributed data feeds and performed PoC for parsing nested objects in large JSON files using Apache Spark
+    \item Implemented a multilingual python module ML NLP translator for sentiment analysis of proprietary news data to data quality
+    \item Identified \pounds13k/month of unused compute savings
+\end{itemize}
+\vspace{-1mm}
+
+%== Other ==%
+\textbf{Pepperl + Fuchs Inc.} - Software Engineer Intern \hfill \textbf{Houston, USA}  2020 \\
+\vspace{2mm}
+\textbf{Deutsche Bank} - Software Engineer Intern \hfill \textbf{London, UK}  2019 \\
+\vspace{2mm}
+\textbf{ARM Holdings} - ML Student Engineering Consultant \hfill \textbf{Cambridge, UK}  2019 \\
+\vspace{2mm}
+\textbf{Apple Inc.} - Retail Product Zone Specialist (Part-time at University) \hfill \textbf{London, UK}  2018 - 2019\\
+
+\vspace{2mm}
+
+%======== Skills ========%
+\header{\textbf{Skills} - (Bold used in current position)}
+
+\vspace{2mm}
+\begin{tabular} {p{3.5cm} p{11.5cm} }
+    Coding:          & \textbf{Typescript (JS)}, \textbf{Python}, C/C++, Java, \textbf{Bash/Shell}, Julia, MATLAB                                                                                   \\
+    QA:              & \textbf{Unit}, \textbf{Integration}, \textbf{Smoke detectors}, \textbf{ML Obvious Case}, \textbf{Front-end testing}, \textbf{Coverage}, \textbf{Datadog}, \textbf{Pagerduty} \\
+    Key Libraries:   & \textbf{Pandas}, \textbf{Numpy}, \textbf{Cypress}, \textbf{Mocha}, \textbf{Unittest}, \textbf{MaterialUI}, \textbf{Mantine}                                                  \\
+    Networking:      & \textbf{GraphQL}, \textbf{Kafka}, FastAPI, Flask                                                                                                                             \\
+    Data Storage:    & \textbf{Postgres}, \textbf{SQL}, \textbf{Prisma}, \textbf{Knex Migrations}, HDFS, \textbf{S3}                                                                                \\
+    Web development: & \textbf{React}, \textbf{Angular}, \textbf{Storybooks}, \textbf{Figma}, \textbf{MaterialUI}, \textbf{Mantine}                                                                 \\
+    Agile:           & \textbf{Jira}, \textbf{Certified ScrumMaster}, \textbf{Miro}, \textbf{Jellyfish}                                                                                             \\
+    CICD:            & \textbf{Harness}, \textbf{ArgoCD}, \textbf{GitHub Actions},  \textbf{Jenkins}, \textbf{Kubernertes}, \textbf{TF}                                                             \\
+    Cloud:           & \textbf{AWS}, \textbf{AWS Secrets Manager},  \textbf{S3}, \textbf{Severless SDK}, Azure, GCP
+\end{tabular}
+
+\normalsize
+
+
+\end{document}
